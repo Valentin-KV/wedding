@@ -30,4 +30,55 @@ body {
 .titledate {
     padding: 0px;
     text-align: center;
+    font-weight: bold;
+}
+
+.hello {
+    display: flex;
+    flex-direction: column;
+}
+
+.hello-title {
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.hello-text {
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.hello-title-time {
+    text-align: center;
+    font-size: 1em;
+}
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #d8d4c9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1em;
+}
+
+#countdown div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#countdown span {
+    font-weight: bold;
+    font-size: 1em;
 }
