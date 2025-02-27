@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #e9e5d9;
+    background-color: #ebeaea;
 }
 .header {
     background-image: url('/wedding/assets/images/pink-roses.jpg');
@@ -36,6 +36,11 @@ body {
 .hello {
     display: flex;
     flex-direction: column;
+    padding: 10px;
+    background-image: url('/wedding/assets/images/rose-branch.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .hello-title {
@@ -60,8 +65,9 @@ body {
     flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
+    margin-bottom: 50px;
     padding: 20px;
-    background-color: #d8d4c9;
+    /*background-color: #d8d4c9;*/
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -81,4 +87,22 @@ body {
 #countdown span {
     font-weight: bold;
     font-size: 1em;
+}
+
+.timing-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.timing-title {
+    text-align: center;
+    margin: 15px auto 0 auto;
+    padding: 10px;
+}
+
+hr {
+    border: 0; /* Убирает стандартный бордюр */
+    height: 1px; /* Толщина линии */
+    background-color: #000; /* Цвет линии */
+    margin: 15px 0; /* Отступы сверху и снизу */
 }
