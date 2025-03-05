@@ -27,3 +27,36 @@ const countdownFunction = setInterval(() => {
         document.getElementById("countdown").innerHTML = "Время истекло!";
     }
 }, 1000);
+
+document.addEventListener('DOMContentLoaded', function () {
+    const toggles = document.querySelectorAll('.accordion-toggle');
+
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', function () {
+        const content = this.nextElementSibling;
+        
+        // Скрыть все открытые содержимое
+        document.querySelectorAll('.accordion-content').forEach(item => {
+          if (item !== content) {
+            item.style.maxHeight = null;
+            item.style.padding = '0 10px';
+            item.previousElementSibling.classList.remove('active');
+            item.previousElementSibling.querySelector('.plus-icon').textContent = '+';
+          }
+        });
+
+        // Переключить отображение текущего содержимого и значка
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          content.style.padding = '0 10px';
+          this.classList.remove('active');
+          this.querySelector('.plus-icon').textContent = '+';
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          content.style.padding = '10px';
+          this.classList.add('active');
+          this.querySelector('.plus-icon').textContent = '-';
+        }
+      });
+    });
+  });

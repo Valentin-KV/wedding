@@ -147,3 +147,45 @@ p {
     margin: 15px auto;
     padding: 0 10px;
 }
+
+.container {
+    width: 300px; /* Ширина контейнера */
+  }
+  
+  .accordion {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);*/
+  }
+  
+  .accordion-toggle {
+    width: 100%;
+    padding: 10px;
+    background-color: #ebeaea;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .accordion-toggle:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    padding: 0 10px;
+    background-color: #ebeaea;
+  }
+  
+  .accordion-content.show {
+    max-height: 100px; /* Установите максимальную высоту в зависимости от содержимого */
+    padding: 10px;
+  }  
