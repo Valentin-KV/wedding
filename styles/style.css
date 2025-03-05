@@ -89,10 +89,20 @@ body {
     font-size: 1em;
 }
 
-.timing-wrap {
+.timing {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+
+.timing-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
 }
 .timing-title {
     text-align: center;
@@ -106,9 +116,17 @@ body {
     font-weight: 400;
 }
 
-hr {
-    border: 0; /* Убирает стандартный бордюр */
-    height: 1px; /* Толщина линии */
-    background-color: #000; /* Цвет линии */
-    margin: 15px 0; /* Отступы сверху и снизу */
+.timing-image {
+    margin: auto;
+}
+
+p {
+    text-indent: 20px; /* Размер отступа с красной строки */
+}
+
+.horizontal-line {
+    width: 100%; /* Ширина линии */
+    height: 2px; /* Толщина линии */
+    background-color: #313131; /* Цвет линии */
+    margin: 10px 0; /* Отступы сверху и снизу */
 }
