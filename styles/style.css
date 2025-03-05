@@ -3,14 +3,12 @@ body {
     background-color: #ebeaea;
 }
 .header {
-    background-image: url('/wedding/assets/images/pink-roses.jpg');
+    background-image: url('/wedding/assets/images/header-background01-30.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding: 20px;
-    max-width: 1200px;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон для читаемости текста */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
