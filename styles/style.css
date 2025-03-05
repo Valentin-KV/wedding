@@ -21,8 +21,8 @@ body {
 }
 
 .title {
-    display: flex;
     text-align: center;
+    font-size: clamp(1.563rem, 0.994rem + 2.84vw, 3.125rem);
 }
 
 .titledate {
@@ -92,8 +92,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 15px auto;
 }
-
 
 .timing-wrap {
     display: flex;
