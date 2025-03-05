@@ -114,7 +114,7 @@ body {
     font-weight: 400;
 }
 
-.timing-image {
+.image {
     margin: auto;
 }
 
@@ -131,6 +131,15 @@ p {
 }
 
 .dresscode {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+    padding: 0 10px;
+}
+
+.hints {
     display: flex;
     flex-direction: column;
     justify-content: center;
