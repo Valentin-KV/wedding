@@ -120,6 +120,7 @@ body {
 
 p {
     text-indent: 20px; /* Размер отступа с красной строки */
+    text-align: center;
 }
 
 .horizontal-line {
@@ -127,4 +128,13 @@ p {
     height: 2px; /* Толщина линии */
     background-color: #313131; /* Цвет линии */
     margin: 10px 0; /* Отступы сверху и снизу */
+}
+
+.dresscode {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+    padding: 0 10px;
 }
