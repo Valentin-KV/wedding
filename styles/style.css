@@ -152,16 +152,16 @@ p {
     display: flex;
     flex-direction: column;
     width: 300px; /* Ширина контейнера */
-  }
-  
-  .accordion {
+}
+
+.accordion {
     list-style: none;
     padding: 0;
     margin: 0;
     /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);*/
-  }
-  
-  .accordion-toggle {
+}
+
+.accordion-toggle {
     width: 100%;
     padding: 10px;
     background-color: #ebeaea;
@@ -173,21 +173,36 @@ p {
     justify-content: space-between;
     align-items: center;
     transition: background-color 0.3s ease-in-out;
-  }
-  
-  .accordion-toggle:hover {
+}
+
+.accordion-toggle:hover {
     background-color: #e0e0e0;
-  }
-  
-  .accordion-content {
+}
+
+.accordion-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
     padding: 0 10px;
     background-color: #ebeaea;
-  }
-  
-  .accordion-content.show {
+}
+
+.accordion-content.show {
     max-height: 100px; /* Установите максимальную высоту в зависимости от содержимого */
     padding: 10px;
-  }  
+}
+
+.geo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+    padding: 0 10px;
+}
+
+.map-container {
+    width: 100%;
+    height: 300px; /* Установите нужную высоту карты */
+    margin: 15px auto;
+}
