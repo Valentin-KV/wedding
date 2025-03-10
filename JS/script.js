@@ -60,3 +60,32 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
+
+  /* Скрипт для отправки данных в гуглдок*/
+
+  document.getElementById('weddingForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var formData = new FormData(event.target);
+
+    var url = 'https://docs.google.com/forms/d/e/1FAIpQLSeEqvlpqbeLH90RS_VBoCU3dT9y_k5JT45ht8rZwsfyQ0hpDA/formResponse'; // Замените YOUR_FORM_ID на ID вашей Google формы
+
+    // Заполняем URL с параметрами формы
+    var params = new URLSearchParams();
+    params.append('entry.1563664619', formData.get('name')); // Замените entry.1234567890 на правильные entry ID вашей формы
+    params.append('entry.1895512918', formData.get('drinks')); // Замените entry.2345678901 на правильные entry ID вашей формы
+    params.append('entry.1979331271', formData.get('attendance')); // Замените entry.3456789012 на правильные entry ID вашей формы
+
+    fetch(url + '?' + params.toString(), {
+        method: 'POST',
+        mode: 'no-cors'
+    })
+    .then(() => {
+        document.getElementById('responseMessage').innerText = 'Данные успешно отправлены';
+        event.target.reset();
+    })
+    .catch(error => {
+        document.getElementById('responseMessage').innerText = 'Ошибка отправки данных';
+    });
+});
+
+
