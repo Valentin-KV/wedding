@@ -83,17 +83,51 @@
             <div class="geo">
                 <h2 class="geo-title">Место проведения</h2>
                 <p class="geo-text">Агроусадьба Цнянская</p>
-                <p class="geo-adress">ул.Юбилейная, 34 Минск</p>
+                <p class="geo-adress">Цнянка, ул. Юбилейная, 34</p>
                 <img class="image" src="/wedding/assets/images/place01.jpg" alt="geo-point">
                 <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d586.6760628475249!2d27.551912861588413!3d53.97251942641692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbc5de09172487%3A0x30b11dadd9a97a77!2sAgrousadba%20Tsnianskaya!5e0!3m2!1sru!2sby!4v1741285112356!5m2!1sru!2sby"
-                        width="100%"
-                        height="100%"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2397b1642632ac55ada415293552431058394e1c059d6ee76e13542b0a7204f9&amp;source=constructor" 
+                        width="320" 
+                        height="300" 
+                        frameborder="0">
                     </iframe>
+                </div>
+            </div>
+            <div class="questions">
+                <h2 class="questions-title">Пожалуйста заполните анкету</h2>
+                <p class="questions-date">До 07.05.2025г.</p>
+                <div class="container-form">
+                    <form id="weddingForm">
+                        <div class="form-group">
+                            <label for="name">Имя и Фамилия:</label>
+                            <input type="text" id="name" name="name" placeholder="Введите ваше ФИО" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="drinks">Выбор напитков:</label>
+                            <select id="drinks" name="drinks" required>
+                                <option value="" disabled selected>Выберите напиток</option>
+                                <option value="Вино красное">Вино красное</option>
+                                <option value="Вино белое">Вино белое</option>
+                                <option value="Пиво">Пиво</option>
+                                <option value="Шампанское">Шампанское</option>
+                                <option value="Коньяк">Коньяк</option>
+                                <option value="Виски">Виски</option>
+                                <option value="Коктейли">Коктейли</option>
+                                <option value="Безалкогольные напитки">Безалкогольные напитки</option>
+                                <option value="Пью всё">Пью всё!</option>
+                            </select>
+                        </div>
+                       <div id="yesorno" class="form-group">
+                            <label for="attendance">Присутствие на торжестве</label>
+                            <div id="attendance" class="radio-group">
+                                <label><input type="radio" name="attendance" value="Да" required>Я приду/Мы придём</label>
+                                <label><input type="radio" name="attendance" value="Нет" required>Я не смогу прийти/ Мы не сможем прийти</label>
+                                <label><input type="radio" name="attendance" value="Не знаю" required>Затрудняюсь ответить</label>
+                            </div>
+                        </div>
+                        <button type="submit">Отправить</button>
+                    </form>
+                    <p id="responseMessage"></p>
                 </div>
             </div>
         </div>
