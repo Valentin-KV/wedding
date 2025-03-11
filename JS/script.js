@@ -67,27 +67,10 @@ document.addEventListener('DOMContentLoaded', function () {
     event.preventDefault();
     var formData = new FormData(event.target);
 
-    var url = 'https://docs.google.com/forms/d/e/1FAIpQLSeEqvlpqbeLH90RS_VBoCU3dT9y_k5JT45ht8rZwsfyQ0hpDA/formResponse';
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyG0fAql1TpAwU3F38DngDICGQ4Ag_WCEzSGlTQVrhfgCxs6y_0M7copSo2TDEHK2fS/exec'
 
-    // Правильные параметры запроса
-    var params = new URLSearchParams();
-    params.append('entry.1563664619', formData.get('name'));
-    params.append('entry.1895512918', formData.get('drinks'));
-    params.append('entry.1979331271', formData.get('attendance'));
+      fetch(scriptURL, { method: 'POST', body: formData})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
 
-    fetch(url, { // УБРАН query string из URL
-        method: 'POST',
-        mode: 'no-cors',
-        body: params, // Параметры теперь передаются в теле запроса
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        }
-    })
-    .then(() => {
-        document.getElementById('responseMessage').innerText = 'Данные успешно отправлены';
-        event.target.reset();
-    })
-    .catch(error => {
-        document.getElementById('responseMessage').innerText = 'Ошибка отправки данных';
-    });
 });
