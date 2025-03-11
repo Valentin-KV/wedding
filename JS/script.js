@@ -67,21 +67,22 @@ document.addEventListener('DOMContentLoaded', function () {
     event.preventDefault();
     var formData = new FormData(event.target);
 
-    var url = 'https://docs.google.com/forms/d/e/1FAIpQLSeEqvlpqbeLH90RS_VBoCU3dT9y_k5JT45ht8rZwsfyQ0hpDA/formResponse'; // Замените YOUR_FORM_ID на ID вашей Google формы
+    var url = 'https://docs.google.com/forms/d/e/1FAIpQLSeEqvlpqbeLH90RS_VBoCU3dT9y_k5JT45ht8rZwsfyQ0hpDA/formResponse';
 
-    // Заполняем URL с параметрами формы
+    // Правильные параметры запроса
     var params = new URLSearchParams();
-    params.append('entry.1563664619', formData.get('name')); // Замените entry.1234567890 на правильные entry ID вашей формы
-    params.append('entry.1895512918', formData.get('drinks')); // Замените entry.2345678901 на правильные entry ID вашей формы
-    params.append('entry.1979331271', formData.get('attendance')); // Замените entry.3456789012 на правильные entry ID вашей формы
+    params.append('entry.1563664619', formData.get('name'));
+    params.append('entry.1895512918', formData.get('drinks'));
+    params.append('entry.1979331271', formData.get('attendance'));
 
-    fetch(url, {
-      method: 'POST',
-      body: params,
-      headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-      }
-  
+    fetch(url, { // УБРАН query string из URL
+        method: 'POST',
+        mode: 'no-cors',
+        body: params, // Параметры теперь передаются в теле запроса
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+    })
     .then(() => {
         document.getElementById('responseMessage').innerText = 'Данные успешно отправлены';
         event.target.reset();
@@ -90,5 +91,3 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('responseMessage').innerText = 'Ошибка отправки данных';
     });
 });
-
-
