@@ -3,7 +3,7 @@ body {
     background-color: #ebeaea;
 }
 .header {
-    background-image: url('/assets/images/header-background01-30.png');
+    background-image: url('/wedding/assets/images/header-background01-30.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -35,7 +35,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    background-image: url('/assets/images/rose-branch-0.5.png');
+    background-image: url('/wedding/assets/images/rose-branch-0.5.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
