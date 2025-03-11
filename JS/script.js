@@ -67,10 +67,22 @@ document.addEventListener('DOMContentLoaded', function () {
     event.preventDefault();
     var formData = new FormData(event.target);
 
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbyG0fAql1TpAwU3F38DngDICGQ4Ag_WCEzSGlTQVrhfgCxs6y_0M7copSo2TDEHK2fS/exec'
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyG0fAql1TpAwU3F38DngDICGQ4Ag_WCEzSGlTQVrhfgCxs6y_0M7copSo2TDEHK2fS/exec'
+    const responseMessage = document.getElementById('responseMessage')
 
-      fetch(scriptURL, { method: 'POST', body: formData})
-          .then(response => console.log('Success!', response))
-          .catch(error => console.error('Error!', error.message))
-
+    fetch(scriptURL, { method: 'POST', body: formData })
+        .then(response => {
+            responseMessage.innerHTML = "Отправлено успешно!";
+            setTimeout(function(){
+                responseMessage.innerHTML = "";
+            }, 3000);
+            event.target.reset(); // Сброс формы после успешной отправки
+        })
+        .catch(error => {
+            console.error('Error!', error.message);
+            responseMessage.innerHTML = "Ошибка отправки данных";
+            setTimeout(function(){
+                responseMessage.innerHTML = "";
+            }, 3000);
+        });
 });

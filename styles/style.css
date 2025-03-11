@@ -277,3 +277,10 @@ input, select, button {
 .radio-group input[type="radio"] {
     margin-right: 10px;
 }
+
+#responseMessage {
+    color: rgb(71, 148, 84);
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+}
