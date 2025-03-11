@@ -75,10 +75,13 @@ document.addEventListener('DOMContentLoaded', function () {
     params.append('entry.1895512918', formData.get('drinks')); // Замените entry.2345678901 на правильные entry ID вашей формы
     params.append('entry.1979331271', formData.get('attendance')); // Замените entry.3456789012 на правильные entry ID вашей формы
 
-    fetch(url + '?' + params.toString(), {
-        method: 'POST',
-        mode: 'no-cors'
-    })
+    fetch(url, {
+      method: 'POST',
+      body: params,
+      headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+      }
+  
     .then(() => {
         document.getElementById('responseMessage').innerText = 'Данные успешно отправлены';
         event.target.reset();
