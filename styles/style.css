@@ -353,3 +353,28 @@ button[type="submit"]:hover {
 .telegram-block .btn:hover {
     background-color: #0077b3;
 }
+
+.footer {
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+}
+.footer__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 15px;
+}
+
+.footer__github a {
+    text-decoration: none;
+}
+.creator-link {
+    width: 45px;
+    height: 45px;
+}
