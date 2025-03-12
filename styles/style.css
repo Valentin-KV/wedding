@@ -18,7 +18,7 @@ h2 {
 h3 {
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
 }
 
@@ -273,6 +273,11 @@ p {
     align-items: center;
     margin: 15px auto 15px auto;
     padding: 0 10px;
+}
+
+.questions-date {
+    font-weight: 600;
+    font-size: 1.2em;
 }
 
 .container-form {
