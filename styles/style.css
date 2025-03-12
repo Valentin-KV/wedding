@@ -284,3 +284,31 @@ input, select, button {
     display: block;
     text-align: center;
 }
+
+.telegram-block {
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+}
+.telegram-block h2 {
+    color: #0088cc;
+}
+.telegram-block p {
+    font-size: 1.2em;
+}
+.telegram-block .btn {
+    background-color: #0088cc;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+.telegram-block .btn:hover {
+    background-color: #0077b3;
+}
