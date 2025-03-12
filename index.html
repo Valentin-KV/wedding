@@ -100,11 +100,11 @@
                 <div class="container-form">
                     <form id="weddingForm">
                         <div class="form-group">
-                            <label for="name">Имя и Фамилия:</label>
+                            <label class="label-title" for="name">Имя и Фамилия:</label>
                             <input type="text" id="name" name="name" placeholder="Введите ваше ФИО" required>
                         </div>
                         <div class="form-group">
-                            <label for="drinks">Выбор напитков:</label>
+                            <label class="label-title" for="drinks">Выбор алкогольных напитков:</label>
                             <select id="drinks" name="drinks" required>
                                 <option value="" disabled selected>Выберите напиток</option>
                                 <option value="Вино красное">Вино красное</option>
@@ -118,11 +118,19 @@
                                 <option value="Пью всё">Пью всё!</option>
                             </select>
                         </div>
+                        <div id="transfer-block" class="form-group">
+                            <label class="label-title" for="transfer">Нужен ли Вам трансфер на мероприятие?</label>
+                            <div id="transfer" class="radio-group">
+                                <label><input type="radio" name="transfer" value="Нужен" required>Да</label>
+                                <label><input type="radio" name="transfer" value="Не нужен" required>Нет</label>
+                                <label><input type="radio" name="transfer" value="Могу подвезти" required>Могу подвезти</label>
+                            </div>
+                        </div>
                        <div id="yesorno" class="form-group">
-                            <label for="attendance">Присутствие на торжестве</label>
+                            <label class="label-title" for="attendance">Присутствие на торжестве</label>
                             <div id="attendance" class="radio-group">
-                                <label><input type="radio" name="attendance" value="Да" required>Я приду/Мы придём</label>
-                                <label><input type="radio" name="attendance" value="Нет" required>Я не смогу прийти/ Мы не сможем прийти</label>
+                                <label><input type="radio" name="attendance" value="Да" required>Я приду</label>
+                                <label><input type="radio" name="attendance" value="Нет" required>Я не смогу прийти</label>
                                 <label><input type="radio" name="attendance" value="Не знаю" required>Затрудняюсь ответить</label>
                             </div>
                         </div>
