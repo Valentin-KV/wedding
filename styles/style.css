@@ -1,7 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Klee+One&family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Klee+One&family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Great+Vibes&family=Klee+One&family=Marck+Script&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 body {
     margin: 0;
     background-color: #ebeaea;
 }
+
+h2 {
+    font-family: "Klee One", cursive;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+}
+
+h3 {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p {
+    font-family: "Shantell Sans", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "BNCE" 0,
+    "INFM" 0,
+    "SPAC" 0;
+}
+
 .header {
     background-image: url('/wedding/assets/images/header-background01-30.png');
     background-size: cover;
@@ -23,9 +54,12 @@ body {
 .title {
     text-align: center;
     font-size: clamp(1.563rem, 0.994rem + 2.84vw, 3.125rem);
+    font-family: "Marck Script", cursive;
+    font-weight: 700;
+    font-style: normal;
 }
 
-.titledate {
+.title-date {
     padding: 0px;
     text-align: center;
     font-weight: bold;
@@ -218,7 +252,6 @@ p {
 }
 
 .map-container {
-    width: 100%;
     height: 300px; /* Установите нужную высоту карты */
     margin: 15px auto 15px auto;
 }
