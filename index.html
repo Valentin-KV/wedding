@@ -126,13 +126,13 @@
                             </div>
                         </div>
                         <div id="yesorno" class="form-group">
-                            <label class="label-title" for="attendance">Присутствие на торжестве</label>
+                            <label class="label-title" for="attendance-yes">Присутствие на торжестве</label>
                             <div id="attendance" class="radio-group">
-                                <label><input type="radio" name="attendance" value="Да" required>Я приду</label>
-                                <label><input type="radio" name="attendance" value="Нет" required>Я не смогу прийти</label>
-                                <label><input type="radio" name="attendance" value="Не знаю" required>Затрудняюсь ответить</label>
+                                <label for="attendance-yes"><input id="attendance-yes" type="radio" name="attendance" value="Да" required>Я приду</label>
+                                <label for="attendance-no"><input id="attendance-no" type="radio" name="attendance" value="Нет" required>Я не смогу прийти</label>
+                                <label for="attendance-maybe"><input id="attendance-maybe" type="radio" name="attendance" value="Не знаю" required>Затрудняюсь ответить</label>
                             </div>
-                        </div>
+                        </div>                        
                         <button type="submit">Отправить</button>
                         <span id="responseMessage"></span>
                     </form>
